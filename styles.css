@@ -7,6 +7,13 @@ body{
     overflow-x: hidden;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
 .Banner{
 
     background-image: url(img/May\ 28\,\ 2026\,\ 12_07_33\ PM.png);
@@ -1358,6 +1365,235 @@ height: 73vh;
         flex: 1 1 100%;
         max-width: none;
         min-width: 0;
+    }
+}
+
+.nav-shell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 3% 0;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.Banner .Nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 999px;
+    padding: 10px 14px;
+}
+
+.Banner .links {
+    color: #fff;
+    font-size: 1rem;
+    width: auto;
+    padding-top: 0;
+}
+
+.Banner .button-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.Banner .Nav-links .button {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    padding: 10px 18px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    border: 0;
+    background: transparent;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+    .nav-shell {
+        padding: 14px 4% 0;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .Banner .Nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 4%;
+        right: 4%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 16px 16px 20px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+    }
+
+    .Banner .Nav-links.is-open {
+        display: flex;
+    }
+
+    .Banner .links {
+        color: #0f172a;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .Banner .Nav-links .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Banner .overlay {
+        width: min(100%, 560px);
+        margin: 24px 4% 0;
+        padding: 24px 20px 28px;
+        box-sizing: border-box;
+    }
+
+    .Banner .overlay h1 {
+        font-size: 2.2rem;
+        padding-top: 24px;
+    }
+
+    .Banner .overlay .p3 {
+        font-size: 1rem;
+    }
+
+    .Banner .flexbox {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .Banner .flexbox .btn,
+    .Banner .flexbox .button {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .Banner .flexbox2 {
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        margin-top: -12px;
+        height: auto;
+        padding: 18px 4%;
+    }
+
+    .services .card1,
+    .services .card2,
+    .services .card3,
+    .services .card4 {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    .offer .flexbox1 {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .offer .flexbox1 > .card1,
+    .offer .flexbox1 > .card2,
+    .offer .flexbox1 > .card3,
+    .offer .flexbox1 > .card4,
+    .offer .flexbox1 > .card5,
+    .offer .flexbox1 .card6 {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .our-fleet,
+    .Destinations,
+    .Why-choose-us,
+    .feedback {
+        height: auto;
+        padding-bottom: 24px;
+    }
+
+    .our-fleet .fleet > *,
+    .Destinations .popular > *,
+    .feedback .Feeds > * {
+        width: 100%;
+    }
+
+    .booking {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 4%;
+    }
+
+    .booking .flexbox2 {
+        width: 100%;
+    }
+
+    .booking .book,
+    .booking .app {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .footer {
+        padding: 24px 4%;
+    }
+
+    .footer .kocak,
+    .footer .links,
+    .footer .info,
+    .footer .follow,
+    .footer .flexbox {
+        width: 100%;
     }
 }
 
